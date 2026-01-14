@@ -26,6 +26,12 @@ const featuredProjects = [
     stack: ["Next.js", "WebSockets", "D3.js"],
     impact: "Instant insights for product and business teams",
   },
+  {
+    name: "E-Commerce Microservices",
+    description: "Complete microservices ecosystem for high-traffic e-commerce platform with event-driven architecture and automated scaling.",
+    stack: ["Go", "Kubernetes", "gRPC", "MongoDB"],
+    impact: "99.99% uptime, 10x throughput improvement",
+  },
 ];
 
 export default function Home() {
@@ -34,30 +40,34 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center bg-grid">
         <div className="container">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl opacity-0 animate-fade-in-up">
             {/* Code-style label */}
             <CodeLabel className="mb-6">Senior Developer</CodeLabel>
 
             {/* Headline with typing cursor */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              I design and build reliable digital systems
+              Hi, I'm Diego Ramirez.
+              <br />
+              <span className="text-muted-foreground">I build reliable digital systems</span>
               <TypingCursor />
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg text-muted-foreground mb-8 max-w-xl leading-relaxed">
-              Focused on building products that scale, perform, and deliver real impact. 
+            <p className="text-lg text-muted-foreground mb-8 max-w-xl leading-relaxed opacity-0 animate-fade-in-up stagger-1">
+              A Mexico-based developer focused on building products that scale, perform, and deliver real impact. 
               Working at the intersection of engineering, product, and design to turn 
               complex problems into elegant solutions.
             </p>
 
             {/* CTA */}
-            <Button asChild size="lg" className="font-mono">
-              <Link to="/work">
-                View Work
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
+            <div className="opacity-0 animate-fade-in-up stagger-2">
+              <Button asChild size="lg" className="font-mono transition-transform hover:scale-105">
+                <Link to="/work">
+                  View Work
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -65,19 +75,26 @@ export default function Home() {
       {/* Featured Projects */}
       <section className="py-20">
         <div className="container">
-          <CodeDivider label="Featured Work" />
+          <div className="opacity-0 animate-fade-in-up">
+            <CodeDivider label="Featured Work" />
+          </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {featuredProjects.map((project) => (
-              <ProjectCard key={project.name} {...project} />
+          <div className="grid gap-6 md:grid-cols-2">
+            {featuredProjects.map((project, index) => (
+              <div 
+                key={project.name} 
+                className={`opacity-0 animate-fade-in-up stagger-${index + 1}`}
+              >
+                <ProjectCard {...project} className="hover-lift" />
+              </div>
             ))}
           </div>
 
           {/* View All Link */}
-          <div className="mt-12 text-center">
+          <div className="mt-12 text-center opacity-0 animate-fade-in-up stagger-4">
             <Link 
               to="/work" 
-              className="inline-flex items-center font-mono text-sm text-muted-foreground hover:text-primary transition-colors"
+              className="inline-flex items-center font-mono text-sm text-muted-foreground hover:text-primary transition-colors link-underline"
             >
               <span className="text-primary mr-2">{"//"}</span>
               View all projects

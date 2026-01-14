@@ -21,6 +21,12 @@ const projects = [
     stack: ["Next.js", "WebSockets", "D3.js", "Redis"],
     impact: "Instant insights for product and business teams",
   },
+  {
+    name: "E-Commerce Microservices Architecture",
+    description: "Complete microservices ecosystem for a high-traffic e-commerce platform. Features event-driven architecture, automated scaling, and distributed data management for maximum reliability and performance.",
+    stack: ["Go", "Kubernetes", "gRPC", "MongoDB"],
+    impact: "99.99% uptime, 10x throughput improvement",
+  },
 ];
 
 export default function Work() {
@@ -29,7 +35,7 @@ export default function Work() {
       <section className="py-20">
         <div className="container">
           {/* Page Header */}
-          <div className="max-w-2xl mb-12">
+          <div className="max-w-2xl mb-12 opacity-0 animate-fade-in-up">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Work
             </h1>
@@ -40,12 +46,19 @@ export default function Work() {
             </p>
           </div>
 
-          <CodeDivider label="Projects" />
+          <div className="opacity-0 animate-fade-in-up stagger-1">
+            <CodeDivider label="Projects" />
+          </div>
 
           {/* Projects Grid */}
           <div className="grid gap-8">
-            {projects.map((project) => (
-              <ProjectCard key={project.name} {...project} />
+            {projects.map((project, index) => (
+              <div 
+                key={project.name}
+                className={`opacity-0 animate-fade-in-up stagger-${Math.min(index + 2, 4)}`}
+              >
+                <ProjectCard {...project} className="hover-lift" />
+              </div>
             ))}
           </div>
         </div>
