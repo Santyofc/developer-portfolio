@@ -10,24 +10,28 @@ import { ArrowRight } from "lucide-react";
 const featuredProjects = [
   {
     name: "Scalable Fintech Platform",
+    slug: "scalable-fintech-platform",
     description: "Development of a scalable financial platform handling millions of transactions with real-time processing and robust security measures.",
     stack: ["React", "TypeScript", "Node.js", "PostgreSQL"],
     impact: "35% latency reduction, millions of users supported",
   },
   {
     name: "Internal Design System",
+    slug: "internal-design-system",
     description: "Creation of a robust design system enabling multiple teams to build consistent, accessible interfaces at scale.",
     stack: ["React", "Storybook", "CSS-in-JS"],
     impact: "40% increase in team productivity",
   },
   {
     name: "Real-Time Analytics Dashboard",
+    slug: "real-time-analytics-dashboard",
     description: "Real-time dashboard for instant decision-making with live data visualization and customizable metrics.",
     stack: ["Next.js", "WebSockets", "D3.js"],
     impact: "Instant insights for product and business teams",
   },
   {
     name: "E-Commerce Microservices",
+    slug: "e-commerce-microservices-architecture",
     description: "Complete microservices ecosystem for high-traffic e-commerce platform with event-driven architecture and automated scaling.",
     stack: ["Go", "Kubernetes", "gRPC", "MongoDB"],
     impact: "99.99% uptime, 10x throughput improvement",

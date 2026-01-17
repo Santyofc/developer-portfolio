@@ -5,24 +5,28 @@ import { ProjectCard } from "@/components/ui/ProjectCard";
 const projects = [
   {
     name: "Scalable Fintech Platform",
+    slug: "scalable-fintech-platform",
     description: "Development of a scalable financial platform designed to handle millions of transactions with real-time processing capabilities. Built with a focus on security, reliability, and performance at scale.",
     stack: ["React", "TypeScript", "Node.js", "PostgreSQL"],
     impact: "35% latency reduction, support for millions of users",
   },
   {
     name: "Internal Design System",
+    slug: "internal-design-system",
     description: "Creation of a comprehensive design system that enables multiple development teams to build consistent, accessible, and visually cohesive interfaces. Includes documentation, component library, and design tokens.",
     stack: ["React", "Storybook", "CSS-in-JS", "TypeScript"],
     impact: "40% increase in team productivity, improved visual consistency",
   },
   {
     name: "Real-Time Analytics Dashboard",
+    slug: "real-time-analytics-dashboard",
     description: "A real-time dashboard built for instant decision-making. Features live data visualization, customizable metrics, and seamless integration with multiple data sources for product and business intelligence.",
     stack: ["Next.js", "WebSockets", "D3.js", "Redis"],
     impact: "Instant insights for product and business teams",
   },
   {
     name: "E-Commerce Microservices Architecture",
+    slug: "e-commerce-microservices-architecture",
     description: "Complete microservices ecosystem for a high-traffic e-commerce platform. Features event-driven architecture, automated scaling, and distributed data management for maximum reliability and performance.",
     stack: ["Go", "Kubernetes", "gRPC", "MongoDB"],
     impact: "99.99% uptime, 10x throughput improvement",
