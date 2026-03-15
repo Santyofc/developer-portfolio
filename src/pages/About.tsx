@@ -1,4 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
+import profilePhoto from "@/assets/profile-photo.png";
 import { CodeDivider } from "@/components/ui/CodeDivider";
 import { TechTag } from "@/components/ui/TechTag";
 
