@@ -5,13 +5,16 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Github, Linkedin, Mail, Send } from "lucide-react";
+import { Github, Linkedin, Mail, Send, Phone, Globe, Instagram, Facebook } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const socialLinks = [
-  { href: "https://github.com", icon: Github, label: "GitHub", handle: "@developer" },
-  { href: "https://linkedin.com", icon: Linkedin, label: "LinkedIn", handle: "/in/developer" },
-  { href: "mailto:hello@developer.dev", icon: Mail, label: "Email", handle: "hello@developer.dev" },
+  { href: "https://www.linkedin.com/in/santi-delgados/", icon: Linkedin, label: "LinkedIn", handle: "/in/santi-delgados" },
+  { href: "mailto:delgadoleiva60@gmail.com", icon: Mail, label: "Email", handle: "delgadoleiva60@gmail.com" },
+  { href: "tel:+50660581663", icon: Phone, label: "Phone", handle: "+506 6058 1663" },
+  { href: "https://zonasurtech.online", icon: Globe, label: "Zona Sur Tech", handle: "zonasurtech.online" },
+  { href: "https://www.instagram.com/santidelgados", icon: Instagram, label: "Instagram", handle: "@santidelgados" },
+  { href: "https://www.facebook.com/SantiagoDelgado.666/", icon: Facebook, label: "Facebook", handle: "SantiagoDelgado" },
 ];
 
 export default function Contact() {
@@ -113,7 +116,7 @@ export default function Contact() {
             <div>
               <CodeDivider label="Connect" />
               
-              <div className="space-y-6">
+              <div className="space-y-4">
                 {socialLinks.map((link) => (
                   <a
                     key={link.label}
@@ -139,6 +142,12 @@ export default function Contact() {
 
               {/* Availability */}
               <div className="mt-8 p-4 bg-card border border-border rounded-lg">
+                <p className="font-mono text-xs text-muted-foreground mb-2">
+                  <span className="text-primary">/*</span> Location <span className="text-primary">*/</span>
+                </p>
+                <p className="text-sm text-foreground mb-3">
+                  San Isidro del General, Pérez Zeledón, Costa Rica
+                </p>
                 <p className="font-mono text-xs text-muted-foreground mb-2">
                   <span className="text-primary">/*</span> Availability <span className="text-primary">*/</span>
                 </p>

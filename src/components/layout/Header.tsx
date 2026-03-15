@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
   Sheet,
@@ -29,7 +29,7 @@ export function Header() {
           to="/" 
           className="font-mono text-sm font-medium text-primary hover:opacity-80 transition-opacity"
         >
-          {"<diego />"}
+          {"<santiago />"}
         </Link>
 
         {/* Desktop Navigation */}
