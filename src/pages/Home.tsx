@@ -9,32 +9,32 @@ import { ArrowRight } from "lucide-react";
 
 const featuredProjects = [
   {
-    name: "Scalable Fintech Platform",
-    slug: "scalable-fintech-platform",
-    description: "Development of a scalable financial platform handling millions of transactions with real-time processing and robust security measures.",
-    stack: ["React", "TypeScript", "Node.js", "PostgreSQL"],
-    impact: "35% latency reduction, millions of users supported",
+    name: "Zona Sur Tech",
+    slug: "zona-sur-tech",
+    description: "Technology platform focused on developing modern software infrastructure, secure digital systems, and scalable web solutions for businesses in Costa Rica and beyond.",
+    stack: ["HTML", "CSS", "JavaScript", "PHP", "WordPress"],
+    impact: "Full stack web development with secure authentication systems",
   },
   {
-    name: "Internal Design System",
-    slug: "internal-design-system",
-    description: "Creation of a robust design system enabling multiple teams to build consistent, accessible interfaces at scale.",
-    stack: ["React", "Storybook", "CSS-in-JS"],
-    impact: "40% increase in team productivity",
+    name: "Secure Authentication Systems",
+    slug: "secure-authentication-systems",
+    description: "Implementation of secure identity and authentication systems with cybersecurity best practices, ethical hacking fundamentals, and network security principles.",
+    stack: ["PHP", "MySQL", "Linux", "Network Security"],
+    impact: "Robust identity management with security-first approach",
   },
   {
-    name: "Real-Time Analytics Dashboard",
-    slug: "real-time-analytics-dashboard",
-    description: "Real-time dashboard for instant decision-making with live data visualization and customizable metrics.",
-    stack: ["Next.js", "WebSockets", "D3.js"],
-    impact: "Instant insights for product and business teams",
+    name: "Telecom Field Operations",
+    slug: "telecom-field-operations",
+    description: "Technical sales and field support for Claro telecommunications services, including router configuration, network troubleshooting, and digital client management.",
+    stack: ["Networking", "Router Config", "CRM", "WhatsApp Business"],
+    impact: "30% increase in sales closure rate through structured follow-up",
   },
   {
-    name: "E-Commerce Microservices",
-    slug: "e-commerce-microservices-architecture",
-    description: "Complete microservices ecosystem for high-traffic e-commerce platform with event-driven architecture and automated scaling.",
-    stack: ["Go", "Kubernetes", "gRPC", "MongoDB"],
-    impact: "99.99% uptime, 10x throughput improvement",
+    name: "Digital Infrastructure Solutions",
+    slug: "digital-infrastructure-solutions",
+    description: "Distributed web infrastructure and high-performance web platforms built with scalable backend architecture and modern development practices.",
+    stack: ["PostgreSQL", "WordPress", "PHP", "MySQL"],
+    impact: "Scalable backend architecture for growing businesses",
   },
 ];
 
@@ -46,21 +46,22 @@ export default function Home() {
         <div className="container">
           <div className="max-w-3xl opacity-0 animate-fade-in-up">
             {/* Code-style label */}
-            <CodeLabel className="mb-6">Senior Developer</CodeLabel>
+            <CodeLabel className="mb-6">Founder & Full Stack Developer</CodeLabel>
 
             {/* Headline with typing cursor */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Hi, I'm Diego Ramirez.
+              Hi, I'm Santiago Delgado.
               <br />
-              <span className="text-muted-foreground">I build reliable digital systems</span>
+              <span className="text-muted-foreground">I build secure digital systems</span>
               <TypingCursor />
             </h1>
 
             {/* Subheadline */}
             <p className="text-lg text-muted-foreground mb-8 max-w-xl leading-relaxed opacity-0 animate-fade-in-up stagger-1">
-              A Mexico-based developer focused on building products that scale, perform, and deliver real impact. 
-              Working at the intersection of engineering, product, and design to turn 
-              complex problems into elegant solutions.
+              A Costa Rica-based developer focused on building scalable digital infrastructure, 
+              secure identity systems, and modern web platforms. 
+              Founder of Zona Sur Tech — combining software development, cybersecurity, 
+              and telecom experience to deliver real impact.
             </p>
 
             {/* CTA */}

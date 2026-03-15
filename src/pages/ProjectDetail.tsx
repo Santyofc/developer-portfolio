@@ -13,81 +13,84 @@ const projectsData: Record<string, {
   impact: string;
   challenges: string[];
   features: string[];
+  liveUrl?: string;
 }> = {
-  "scalable-fintech-platform": {
-    name: "Scalable Fintech Platform",
-    description: "Development of a scalable financial platform designed to handle millions of transactions with real-time processing capabilities.",
-    fullDescription: "Built a comprehensive financial platform from the ground up, focusing on security, reliability, and performance at scale. The system processes millions of transactions daily with sub-second latency, implementing sophisticated fraud detection algorithms and real-time analytics dashboards for stakeholders.",
-    stack: ["React", "TypeScript", "Node.js", "PostgreSQL", "Redis", "AWS"],
-    impact: "35% latency reduction, support for millions of users",
+  "zona-sur-tech": {
+    name: "Zona Sur Tech",
+    description: "Technology platform focused on developing modern software infrastructure and secure digital systems.",
+    fullDescription: "Founded and built Zona Sur Tech, a technology initiative focused on developing modern software infrastructure, secure digital systems, and scalable web platforms. The project combines full stack web development with cybersecurity principles to deliver robust digital solutions for businesses in Costa Rica and beyond.",
+    stack: ["HTML", "CSS", "JavaScript", "PHP", "WordPress", "MySQL"],
+    impact: "Scalable digital infrastructure serving multiple businesses",
     challenges: [
-      "Handling high-volume concurrent transactions without data loss",
-      "Implementing real-time fraud detection with minimal false positives",
-      "Ensuring PCI-DSS compliance across the entire stack",
-      "Scaling horizontally while maintaining data consistency"
+      "Building secure authentication systems from scratch",
+      "Designing distributed web infrastructure for reliability",
+      "Creating high-performance platforms with limited resources",
+      "Integrating cybersecurity best practices into every layer"
     ],
     features: [
-      "Real-time transaction processing engine",
-      "Multi-factor authentication system",
-      "Automated fraud detection with ML models",
-      "Comprehensive audit logging and reporting"
+      "Full stack web development platform",
+      "Secure authentication and identity systems",
+      "Distributed web infrastructure",
+      "High-performance web platforms",
+      "Scalable backend architecture"
+    ],
+    liveUrl: "https://zonasurtech.online"
+  },
+  "secure-authentication-systems": {
+    name: "Secure Authentication Systems",
+    description: "Implementation of secure identity and authentication systems with cybersecurity best practices.",
+    fullDescription: "Designed and implemented secure identity and authentication systems applying cybersecurity fundamentals learned through EC-Council, Cisco, and IBM certifications. Built with a security-first approach, incorporating ethical hacking principles, network security basics, and robust access control mechanisms.",
+    stack: ["PHP", "MySQL", "Linux", "Network Security", "Ethical Hacking"],
+    impact: "Robust identity management with security-first approach",
+    challenges: [
+      "Implementing secure password hashing and session management",
+      "Protecting against common web vulnerabilities (XSS, CSRF, SQL injection)",
+      "Designing multi-layer authentication flows",
+      "Applying ethical hacking knowledge to identify and fix vulnerabilities"
+    ],
+    features: [
+      "Secure user registration and login systems",
+      "Session management with proper token handling",
+      "Input validation and sanitization",
+      "Security audit logging and monitoring"
     ]
   },
-  "internal-design-system": {
-    name: "Internal Design System",
-    description: "Creation of a comprehensive design system that enables multiple development teams to build consistent interfaces.",
-    fullDescription: "Developed and maintained a company-wide design system used by 50+ developers across multiple product teams. The system includes a complete component library, design tokens, documentation portal, and automated visual regression testing to ensure consistency across all products.",
-    stack: ["React", "Storybook", "CSS-in-JS", "TypeScript", "Figma API"],
-    impact: "40% increase in team productivity, improved visual consistency",
+  "telecom-field-operations": {
+    name: "Telecom Field Operations — Claro",
+    description: "Technical sales and field support for Claro telecommunications services.",
+    fullDescription: "Provided technical sales and field support for Claro telecommunications services through PIKI Solutions S.A. and Brenda Marrero & Associates. Responsibilities included installation and configuration of home internet routers, network troubleshooting, customer technical assistance, and digital client management. Implemented digital form processes that reduced registration errors by 18%.",
+    stack: ["Networking", "Router Configuration", "CRM Tools", "WhatsApp Business", "Digital Forms"],
+    impact: "30% increase in sales closure rate, 18% reduction in registration errors",
     challenges: [
-      "Aligning design and engineering teams on component APIs",
-      "Maintaining backward compatibility during updates",
-      "Creating accessible components that meet WCAG 2.1 AA standards",
-      "Documenting usage patterns for diverse use cases"
+      "Diagnosing and resolving diverse network connectivity issues in the field",
+      "Managing customer expectations while delivering technical solutions",
+      "Implementing digital workflows for traditionally manual processes",
+      "Maintaining high conversion rates in competitive telecom market"
     ],
     features: [
-      "60+ production-ready components",
-      "Automated visual regression testing",
-      "Figma-to-code synchronization",
-      "Interactive documentation with live examples"
+      "Home internet router installation and configuration",
+      "Network troubleshooting and customer technical assistance",
+      "Digital client management and service activation",
+      "Structured client follow-up system for improved conversion"
     ]
   },
-  "real-time-analytics-dashboard": {
-    name: "Real-Time Analytics Dashboard",
-    description: "A real-time dashboard built for instant decision-making with live data visualization.",
-    fullDescription: "Created a high-performance analytics dashboard that processes and visualizes millions of data points in real-time. The system features customizable widgets, alerting capabilities, and seamless integration with multiple data sources including databases, APIs, and streaming platforms.",
-    stack: ["Next.js", "WebSockets", "D3.js", "Redis", "ClickHouse"],
-    impact: "Instant insights for product and business teams",
+  "digital-infrastructure-solutions": {
+    name: "Digital Infrastructure Solutions",
+    description: "Distributed web infrastructure and high-performance web platforms.",
+    fullDescription: "Built distributed web infrastructure and high-performance web platforms using scalable backend architecture and modern development practices. Projects include WordPress-based solutions with custom themes and plugins, database management with MySQL and PostgreSQL, and server administration for reliable hosting environments.",
+    stack: ["PostgreSQL", "WordPress", "PHP", "MySQL", "Linux", "VS Code"],
+    impact: "Scalable backend architecture for growing businesses",
     challenges: [
-      "Rendering large datasets without performance degradation",
-      "Implementing efficient data aggregation pipelines",
-      "Creating intuitive drag-and-drop dashboard customization",
-      "Handling network interruptions gracefully"
+      "Optimizing database queries for large datasets",
+      "Configuring server environments for maximum uptime",
+      "Building custom WordPress solutions beyond standard themes",
+      "Managing multiple client projects with varying requirements"
     ],
     features: [
-      "Real-time data streaming with WebSocket connections",
-      "Customizable dashboard layouts and widgets",
-      "Advanced filtering and drill-down capabilities",
-      "Automated alerting and anomaly detection"
-    ]
-  },
-  "e-commerce-microservices-architecture": {
-    name: "E-Commerce Microservices Architecture",
-    description: "Complete microservices ecosystem for a high-traffic e-commerce platform.",
-    fullDescription: "Architected and implemented a distributed microservices system handling peak traffic of 100K+ requests per minute. The platform features event-driven communication, automated scaling, circuit breakers, and comprehensive observability with distributed tracing.",
-    stack: ["Go", "Kubernetes", "gRPC", "MongoDB", "Kafka", "Prometheus"],
-    impact: "99.99% uptime, 10x throughput improvement",
-    challenges: [
-      "Designing resilient inter-service communication",
-      "Implementing distributed transactions across services",
-      "Managing data consistency in eventual consistency model",
-      "Orchestrating deployments across 20+ microservices"
-    ],
-    features: [
-      "Event-driven architecture with Kafka",
-      "Kubernetes-native auto-scaling",
-      "Distributed tracing with Jaeger",
-      "Comprehensive health monitoring and alerting"
+      "Custom WordPress development (Astra, Beaver, Gutenberg)",
+      "Database design and management with MySQL/PostgreSQL",
+      "Server configuration and Linux administration",
+      "Performance optimization and caching strategies"
     ]
   }
 };
@@ -188,14 +191,19 @@ export default function ProjectDetail() {
 
           {/* Action Buttons */}
           <div className="flex flex-wrap gap-4 pt-8 border-t border-border opacity-0 animate-fade-in-up stagger-4">
-            <Button variant="outline" className="font-mono" disabled>
-              <Github className="mr-2 h-4 w-4" />
-              View Code
-            </Button>
-            <Button variant="outline" className="font-mono" disabled>
-              <ExternalLink className="mr-2 h-4 w-4" />
-              Live Demo
-            </Button>
+            {project.liveUrl ? (
+              <Button variant="outline" className="font-mono" asChild>
+                <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="mr-2 h-4 w-4" />
+                  Live Site
+                </a>
+              </Button>
+            ) : (
+              <Button variant="outline" className="font-mono" disabled>
+                <ExternalLink className="mr-2 h-4 w-4" />
+                Live Demo
+              </Button>
+            )}
           </div>
         </div>
       </section>

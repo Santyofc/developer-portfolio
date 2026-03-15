@@ -3,24 +3,32 @@ import { CodeDivider } from "@/components/ui/CodeDivider";
 import { TechTag } from "@/components/ui/TechTag";
 
 const skills = [
-  "Systems Architecture",
-  "Frontend Engineering",
-  "API Design",
-  "Performance Optimization",
-  "Technical Leadership",
-  "Product Development",
+  "Full Stack Web Development",
+  "Cybersecurity Fundamentals",
+  "Network Administration",
+  "Systems Infrastructure",
+  "Technical Sales & Support",
+  "Digital Client Management",
 ];
 
 const stack = [
-  "TypeScript",
-  "React",
-  "Node.js",
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "PHP",
+  "MySQL",
   "PostgreSQL",
-  "Next.js",
-  "GraphQL",
-  "Redis",
-  "Docker",
-  "AWS",
+  "WordPress",
+  "Linux",
+  "VS Code",
+];
+
+const certifications = [
+  "Ethical Hacking Essentials — EC-Council",
+  "Introduction to Cybersecurity — Cisco",
+  "Cybersecurity Fundamentals — IBM",
+  "Introduction to Dark Web — EC-Council",
+  "IT & Communication Technologies — INA",
 ];
 
 export default function About() {
@@ -43,7 +51,7 @@ export default function About() {
                 <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-lg overflow-hidden border-2 border-primary/30 transition-all duration-300 hover:border-primary">
                   <img
                     src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400"
-                    alt="Diego Ramirez - Developer"
+                    alt="José Santiago Delgado Leiva - Developer"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -51,26 +59,27 @@ export default function About() {
 
               <div className="opacity-0 animate-fade-in-up stagger-1">
                 <p className="text-lg text-foreground leading-relaxed">
-                  I'm <span className="text-primary font-medium">Diego Ramirez</span>, a developer based in Mexico focused on building systems that scale, perform, and last. 
-                  I work at the intersection of engineering, product, and design, turning 
-                  complex problems into reliable digital solutions.
+                  I'm <span className="text-primary font-medium">José Santiago Delgado Leiva</span>, 
+                  Founder and Full Stack Developer at Zona Sur Tech, based in San Isidro del General, 
+                  Pérez Zeledón, Costa Rica.
                 </p>
               </div>
 
               <div className="opacity-0 animate-fade-in-up stagger-2">
                 <p className="text-muted-foreground leading-relaxed">
-                  With years of experience in the industry, I've worked on everything from 
-                  early-stage startups to enterprise-scale systems. My approach combines 
-                  technical depth with product thinking — always focused on delivering 
-                  real impact, not just shipping code.
+                  I have hands-on experience in web development, telecommunications infrastructure, 
+                  networking, and cybersecurity fundamentals. I created Zona Sur Tech, a technology 
+                  initiative focused on building scalable digital infrastructure, secure identity 
+                  systems, and modern web platforms.
                 </p>
               </div>
 
               <div className="opacity-0 animate-fade-in-up stagger-3">
                 <p className="text-muted-foreground leading-relaxed">
-                  I believe in writing code that's maintainable, documented, and built to 
-                  evolve. Every system I design considers not just the current requirements, 
-                  but how it will need to change and scale over time.
+                  My background combines software development, IT support, and telecom technical 
+                  services, with a strong interest in cybersecurity, distributed systems, and 
+                  digital infrastructure. I build solutions that combine security, scalability, 
+                  and modern web technologies.
                 </p>
               </div>
 
@@ -80,16 +89,16 @@ export default function About() {
 
               <div className="space-y-4 font-mono text-sm opacity-0 animate-fade-in-up stagger-4">
                 <p className="text-muted-foreground transition-colors hover:text-foreground">
-                  <span className="text-primary">{"//"}</span> Build for reliability, not just speed
+                  <span className="text-primary">{"//"}</span> Security first, scalability always
                 </p>
                 <p className="text-muted-foreground transition-colors hover:text-foreground">
-                  <span className="text-primary">{"//"}</span> Measure impact, not just output
+                  <span className="text-primary">{"//"}</span> Build infrastructure that grows with the business
                 </p>
                 <p className="text-muted-foreground transition-colors hover:text-foreground">
-                  <span className="text-primary">{"//"}</span> Simplify complexity, don't hide it
+                  <span className="text-primary">{"//"}</span> Combine development with real-world field experience
                 </p>
                 <p className="text-muted-foreground transition-colors hover:text-foreground">
-                  <span className="text-primary">{"//"}</span> Document decisions, not just code
+                  <span className="text-primary">{"//"}</span> Deliver digital solutions with measurable impact
                 </p>
               </div>
             </div>
@@ -123,15 +132,29 @@ export default function About() {
                 </div>
               </div>
 
-              {/* Experience */}
+              {/* Certifications */}
               <div className="opacity-0 animate-fade-in-up stagger-4">
                 <h2 className="font-mono text-sm text-primary mb-4">
-                  <span className="text-muted-foreground">/*</span> Experience <span className="text-muted-foreground">*/</span>
+                  <span className="text-muted-foreground">/*</span> Certifications <span className="text-muted-foreground">*/</span>
                 </h2>
-                <div className="space-y-3 text-sm text-muted-foreground">
-                  <p>8+ years in software development</p>
-                  <p>Startups to enterprise scale</p>
-                  <p>Remote-first since 2018</p>
+                <ul className="space-y-2">
+                  {certifications.map((cert) => (
+                    <li key={cert} className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                      <span className="text-primary mr-2">✓</span>
+                      {cert}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Languages */}
+              <div className="opacity-0 animate-fade-in-up stagger-4">
+                <h2 className="font-mono text-sm text-primary mb-4">
+                  <span className="text-muted-foreground">/*</span> Languages <span className="text-muted-foreground">*/</span>
+                </h2>
+                <div className="space-y-2 text-sm text-muted-foreground">
+                  <p>Spanish (Native)</p>
+                  <p>English (Intermediate)</p>
                 </div>
               </div>
             </div>

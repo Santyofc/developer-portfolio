@@ -4,32 +4,32 @@ import { ProjectCard } from "@/components/ui/ProjectCard";
 
 const projects = [
   {
-    name: "Scalable Fintech Platform",
-    slug: "scalable-fintech-platform",
-    description: "Development of a scalable financial platform designed to handle millions of transactions with real-time processing capabilities. Built with a focus on security, reliability, and performance at scale.",
-    stack: ["React", "TypeScript", "Node.js", "PostgreSQL"],
-    impact: "35% latency reduction, support for millions of users",
+    name: "Zona Sur Tech",
+    slug: "zona-sur-tech",
+    description: "Technology platform focused on developing modern software infrastructure, secure digital systems, and scalable web solutions. Full stack web development with secure authentication and distributed architecture.",
+    stack: ["HTML", "CSS", "JavaScript", "PHP", "WordPress"],
+    impact: "Scalable digital infrastructure for businesses",
   },
   {
-    name: "Internal Design System",
-    slug: "internal-design-system",
-    description: "Creation of a comprehensive design system that enables multiple development teams to build consistent, accessible, and visually cohesive interfaces. Includes documentation, component library, and design tokens.",
-    stack: ["React", "Storybook", "CSS-in-JS", "TypeScript"],
-    impact: "40% increase in team productivity, improved visual consistency",
+    name: "Secure Authentication Systems",
+    slug: "secure-authentication-systems",
+    description: "Implementation of secure identity and authentication systems applying cybersecurity best practices, ethical hacking fundamentals, and network security principles for robust digital platforms.",
+    stack: ["PHP", "MySQL", "Linux", "Network Security"],
+    impact: "Security-first identity management systems",
   },
   {
-    name: "Real-Time Analytics Dashboard",
-    slug: "real-time-analytics-dashboard",
-    description: "A real-time dashboard built for instant decision-making. Features live data visualization, customizable metrics, and seamless integration with multiple data sources for product and business intelligence.",
-    stack: ["Next.js", "WebSockets", "D3.js", "Redis"],
-    impact: "Instant insights for product and business teams",
+    name: "Telecom Field Operations — Claro",
+    slug: "telecom-field-operations",
+    description: "Technical sales and field support for Claro telecommunications services at PIKI Solutions S.A. Router installation/configuration, network troubleshooting, and digital client management.",
+    stack: ["Networking", "Router Config", "CRM", "WhatsApp Business"],
+    impact: "30% increase in sales closure rate",
   },
   {
-    name: "E-Commerce Microservices Architecture",
-    slug: "e-commerce-microservices-architecture",
-    description: "Complete microservices ecosystem for a high-traffic e-commerce platform. Features event-driven architecture, automated scaling, and distributed data management for maximum reliability and performance.",
-    stack: ["Go", "Kubernetes", "gRPC", "MongoDB"],
-    impact: "99.99% uptime, 10x throughput improvement",
+    name: "Digital Infrastructure Solutions",
+    slug: "digital-infrastructure-solutions",
+    description: "Distributed web infrastructure and high-performance web platforms built with scalable backend architecture, database management, and modern development practices.",
+    stack: ["PostgreSQL", "WordPress", "PHP", "MySQL"],
+    impact: "Scalable backend architecture for growing businesses",
   },
 ];
 
@@ -44,9 +44,9 @@ export default function Work() {
               Work
             </h1>
             <p className="text-muted-foreground leading-relaxed">
-              A selection of projects showcasing systems engineering, product development, 
-              and technical problem-solving. Each project represents real challenges solved 
-              with measurable impact.
+              A selection of projects showcasing web development, cybersecurity, 
+              and digital infrastructure. Each project combines security, scalability, 
+              and modern technologies to deliver real impact.
             </p>
           </div>
 

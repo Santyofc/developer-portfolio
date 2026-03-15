@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail, Globe } from "lucide-react";
 
 const socialLinks = [
-  { href: "https://github.com", icon: Github, label: "GitHub" },
-  { href: "https://linkedin.com", icon: Linkedin, label: "LinkedIn" },
-  { href: "mailto:hello@developer.dev", icon: Mail, label: "Email" },
+  { href: "https://www.linkedin.com/in/santi-delgados/", icon: Linkedin, label: "LinkedIn" },
+  { href: "mailto:delgadoleiva60@gmail.com", icon: Mail, label: "Email" },
+  { href: "https://zonasurtech.online", icon: Globe, label: "Zona Sur Tech" },
 ];
 
 export function Footer() {
@@ -16,7 +16,7 @@ export function Footer() {
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           {/* Copyright */}
           <p className="font-mono text-sm text-muted-foreground">
-            <span className="text-primary">//</span> © {currentYear} Diego Ramirez
+            <span className="text-primary">//</span> © {currentYear} Santiago Delgado
           </p>
 
           {/* Footer Links */}
