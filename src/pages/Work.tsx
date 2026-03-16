@@ -1,70 +1,63 @@
+import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { CodeDivider } from "@/components/ui/CodeDivider";
 import { ProjectCard } from "@/components/ui/ProjectCard";
+import { projects } from "@/data/projects";
+import { useLanguage } from "@/core/LanguageContext";
 
-const projects = [
-  {
-    name: "Zona Sur Tech",
-    slug: "zona-sur-tech",
-    description: "Technology platform focused on developing modern software infrastructure, secure digital systems, and scalable web solutions. Full stack web development with secure authentication and distributed architecture.",
-    stack: ["HTML", "CSS", "JavaScript", "PHP", "WordPress"],
-    impact: "Scalable digital infrastructure for businesses",
-  },
-  {
-    name: "Secure Authentication Systems",
-    slug: "secure-authentication-systems",
-    description: "Implementation of secure identity and authentication systems applying cybersecurity best practices, ethical hacking fundamentals, and network security principles for robust digital platforms.",
-    stack: ["PHP", "MySQL", "Linux", "Network Security"],
-    impact: "Security-first identity management systems",
-  },
-  {
-    name: "Telecom Field Operations — Claro",
-    slug: "telecom-field-operations",
-    description: "Technical sales and field support for Claro telecommunications services at PIKI Solutions S.A. Router installation/configuration, network troubleshooting, and digital client management.",
-    stack: ["Networking", "Router Config", "CRM", "WhatsApp Business"],
-    impact: "30% increase in sales closure rate",
-  },
-  {
-    name: "Digital Infrastructure Solutions",
-    slug: "digital-infrastructure-solutions",
-    description: "Distributed web infrastructure and high-performance web platforms built with scalable backend architecture, database management, and modern development practices.",
-    stack: ["PostgreSQL", "WordPress", "PHP", "MySQL"],
-    impact: "Scalable backend architecture for growing businesses",
-  },
-];
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.12 } },
+};
 
 export default function Work() {
+  const { t } = useLanguage();
   return (
     <Layout>
+      {/* Hero */}
+      <section className="relative pt-36 pb-20 bg-grid-cyber overflow-hidden">
+        <div className="absolute bottom-0 left-1/3 w-96 h-64 bg-zs-accent-secondary/5 rounded-full blur-[120px]" />
+        <div className="container relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl"
+          >
+            <p className="font-mono text-xs text-zs-accent-primary uppercase tracking-[0.3em] mb-4">
+              [ PROJECT_REGISTRY.json ]
+            </p>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tighter">
+              <span className="text-gradient">{t('work.title')}</span>
+            </h1>
+            <p className="text-lg text-zs-text-secondary max-w-xl leading-relaxed">
+              {t('work.subtitle')}
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       <section className="py-20">
         <div className="container">
-          {/* Page Header */}
-          <div className="max-w-2xl mb-12 opacity-0 animate-fade-in-up">
-            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Work
-            </h1>
-            <p className="text-muted-foreground leading-relaxed">
-              A selection of projects showcasing web development, cybersecurity, 
-              and digital infrastructure. Each project combines security, scalability, 
-              and modern technologies to deliver real impact.
-            </p>
-          </div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            <CodeDivider label={`TOTAL_PROJECTS: ${projects.length}`} />
+          </motion.div>
 
-          <div className="opacity-0 animate-fade-in-up stagger-1">
-            <CodeDivider label="Projects" />
-          </div>
-
-          {/* Projects Grid */}
-          <div className="grid gap-8">
-            {projects.map((project, index) => (
-              <div 
-                key={project.name}
-                className={`opacity-0 animate-fade-in-up stagger-${Math.min(index + 2, 4)}`}
-              >
-                <ProjectCard {...project} className="hover-lift" />
-              </div>
+          <motion.div
+            className="grid gap-8 md:grid-cols-2 mt-4"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {projects.map((project) => (
+              <ProjectCard key={project.id} project={project} />
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
     </Layout>

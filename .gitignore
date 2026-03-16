@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Security
+.env
+*.pem
+
+# Unnecessary build/lock files
+bun.lock*
+nginx-config

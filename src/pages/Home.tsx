@@ -1,111 +1,126 @@
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { CodeDivider } from "@/components/ui/CodeDivider";
 import { CodeLabel } from "@/components/ui/CodeLabel";
 import { ProjectCard } from "@/components/ui/ProjectCard";
-import { TypingCursor } from "@/components/ui/TypingCursor";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Briefcase, Zap } from "lucide-react";
+import { projects } from "@/data/projects";
+import { EditableText } from "@/components/ui/EditableText";
+import { useLanguage } from "@/core/LanguageContext";
 
-const featuredProjects = [
-  {
-    name: "Zona Sur Tech",
-    slug: "zona-sur-tech",
-    description: "Technology platform focused on developing modern software infrastructure, secure digital systems, and scalable web solutions for businesses in Costa Rica and beyond.",
-    stack: ["HTML", "CSS", "JavaScript", "PHP", "WordPress"],
-    impact: "Full stack web development with secure authentication systems",
-  },
-  {
-    name: "Secure Authentication Systems",
-    slug: "secure-authentication-systems",
-    description: "Implementation of secure identity and authentication systems with cybersecurity best practices, ethical hacking fundamentals, and network security principles.",
-    stack: ["PHP", "MySQL", "Linux", "Network Security"],
-    impact: "Robust identity management with security-first approach",
-  },
-  {
-    name: "Telecom Field Operations",
-    slug: "telecom-field-operations",
-    description: "Technical sales and field support for Claro telecommunications services, including router configuration, network troubleshooting, and digital client management.",
-    stack: ["Networking", "Router Config", "CRM", "WhatsApp Business"],
-    impact: "30% increase in sales closure rate through structured follow-up",
-  },
-  {
-    name: "Digital Infrastructure Solutions",
-    slug: "digital-infrastructure-solutions",
-    description: "Distributed web infrastructure and high-performance web platforms built with scalable backend architecture and modern development practices.",
-    stack: ["PostgreSQL", "WordPress", "PHP", "MySQL"],
-    impact: "Scalable backend architecture for growing businesses",
-  },
-];
+const featuredProjects = projects.slice(0, 2);
 
 export default function Home() {
+  const { language, t } = useLanguage();
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center bg-grid">
-        <div className="container">
-          <div className="max-w-3xl opacity-0 animate-fade-in-up">
-            {/* Code-style label */}
-            <CodeLabel className="mb-6">Founder & Full Stack Developer</CodeLabel>
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-grid-cyber">
+        {/* Background Ambient Glow */}
+        <div className="absolute top-1/4 -left-20 w-80 h-80 bg-primary/10 rounded-full blur-[120px] animate-glow-pulse" />
+        <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-blue-500/10 rounded-full blur-[120px] animate-glow-pulse delay-1000" />
 
-            {/* Headline with typing cursor */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Hi, I'm Santiago Delgado.
-              <br />
-              <span className="text-muted-foreground">I build secure digital systems</span>
-              <TypingCursor />
-            </h1>
+        <div className="container relative z-10">
+          <div className="max-w-4xl">
+            {/* Code-style label */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <CodeLabel className="mb-6 border-zs-accent-primary/50 text-zs-accent-primary bg-zs-accent-primary/5">
+                Senior Full Stack SaaS Architect
+              </CodeLabel>
+            </motion.div>
+
+            {/* Headline */}
+            <motion.h1 
+              className="mb-8 leading-[1.1] tracking-tighter"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <EditableText tag="h1" className="text-5xl md:text-7xl lg:text-8xl font-bold">
+                <span className="text-gradient">{t('hero.name')}</span>
+                <br />
+                <span className="text-zs-text-secondary text-4xl md:text-6xl lg:text-7x">
+                  {t('hero.headline')}
+                </span>
+              </EditableText>
+            </motion.h1>
 
             {/* Subheadline */}
-            <p className="text-lg text-muted-foreground mb-8 max-w-xl leading-relaxed opacity-0 animate-fade-in-up stagger-1">
-              A Costa Rica-based developer focused on building scalable digital infrastructure, 
-              secure identity systems, and modern web platforms. 
-              Founder of Zona Sur Tech — combining software development, cybersecurity, 
-              and telecom experience to deliver real impact.
-            </p>
+            <motion.p 
+              className="mb-10 max-w-2xl leading-relaxed"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <EditableText tag="p" className="text-lg md:text-xl text-zs-text-muted">
+                {t('hero.subheadline')}
+              </EditableText>
+            </motion.p>
 
             {/* CTA */}
-            <div className="opacity-0 animate-fade-in-up stagger-2">
-              <Button asChild size="lg" className="font-mono transition-transform hover:scale-105">
-                <Link to="/work">
-                  View Work
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
+            <motion.div 
+              className="flex flex-wrap gap-4"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+            >
+                <Button className="font-mono h-12 px-8 rounded-xl glow-green hover:scale-[1.02] transition-all" asChild>
+                  <Link to={`/${language}/work`}>
+                    <Briefcase className="mr-2 h-4 w-4" />
+                    {t('hero.cta.work')}
+                  </Link>
+                </Button>
+                <Button variant="outline" className="font-mono h-12 px-8 rounded-xl border-zs-border-subtle" asChild>
+                  <Link to={`/${language}/contact`}>
+                    <Zap className="mr-2 h-4 w-4" />
+                    {t('hero.cta.contact')}
+                  </Link>
+                </Button>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Featured Projects */}
-      <section className="py-20">
+      <section className="py-32 relative bg-zs-bg-primary">
         <div className="container">
-          <div className="opacity-0 animate-fade-in-up">
-            <CodeDivider label="Featured Work" />
-          </div>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <CodeDivider label="FEATURED_PROJECTS" />
+          </motion.div>
 
-          <div className="grid gap-6 md:grid-cols-2">
-            {featuredProjects.map((project, index) => (
-              <div 
-                key={project.name} 
-                className={`opacity-0 animate-fade-in-up stagger-${index + 1}`}
-              >
-                <ProjectCard {...project} className="hover-lift" />
-              </div>
+          <div className="grid gap-8 md:grid-cols-2">
+            {featuredProjects.map((project) => (
+              <ProjectCard key={project.id} project={project} />
             ))}
           </div>
 
           {/* View All Link */}
-          <div className="mt-12 text-center opacity-0 animate-fade-in-up stagger-4">
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="mt-20 text-center"
+          >
             <Link 
-              to="/work" 
-              className="inline-flex items-center font-mono text-sm text-muted-foreground hover:text-primary transition-colors link-underline"
+              to={`/${language}/work`} 
+              className="group inline-flex items-center font-mono text-sm text-zs-text-muted hover:text-zs-accent-primary transition-colors py-4 px-8 rounded-full border border-zs-border-subtle hover:border-zs-accent-primary/30 bg-zs-bg-secondary/50 backdrop-blur-sm"
             >
-              <span className="text-primary mr-2">{"//"}</span>
-              View all projects
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <span className="text-zs-accent-primary mr-2 opacity-50 group-hover:opacity-100 transition-opacity">{"//"}</span>
+              {t('work.view_all')}
+              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Link>
-          </div>
+          </motion.div>
         </div>
       </section>
     </Layout>

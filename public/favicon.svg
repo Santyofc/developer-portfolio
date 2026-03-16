@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Tech-Hacker Aesthetic Background Box -->
+  <rect x="10" y="10" width="80" height="80" rx="15" fill="#0b0f17" stroke="#00f5a0" stroke-width="4" />
+  
+  <!-- Stylized 'SD' -->
+  <text x="50" y="65" font-family="JetBrains Mono, monospace" font-size="40" font-weight="bold" fill="#00f5a0" text-anchor="middle" letter-spacing="-2">SD</text>
+  
+  <!-- Corner Tech Detail -->
+  <path d="M75 25 L85 25 L85 35" fill="none" stroke="#00f5a0" stroke-width="2" />
+  <path d="M25 75 L15 75 L15 65" fill="none" stroke="#00f5a0" stroke-width="2" />
+</svg>

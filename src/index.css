@@ -1,93 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Developer Portfolio Design System
-   Dark, technical, terminal-inspired aesthetic
-   All colors MUST be HSL.
+/* 
+  🏷️ ZONA SUR TECH - DESIGN SYSTEM 
+  Aesthetic: Hacker-tech, high-performance, premium dark mode.
 */
 
 @layer base {
   :root {
-    /* Dark theme as default - deep black/graphite */
-    --background: 0 0% 4%;
-    --foreground: 0 0% 98%;
-
-    /* Card backgrounds - slightly lighter graphite */
-    --card: 0 0% 7%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 0 0% 7%;
-    --popover-foreground: 0 0% 98%;
-
-    /* Primary - Neon Green accent */
-    --primary: 130 100% 50%;
-    --primary-foreground: 0 0% 4%;
-
-    /* Secondary - Dark graphite */
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 98%;
-
-    /* Muted - Subtle gray */
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
-
-    /* Accent - Same as primary for consistency */
-    --accent: 130 100% 50%;
-    --accent-foreground: 0 0% 4%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-
-    /* Borders - Subtle dark lines */
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 130 100% 50%;
-
-    --radius: 0.375rem;
-
-    /* Sidebar */
-    --sidebar-background: 0 0% 5%;
-    --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 130 100% 50%;
-    --sidebar-primary-foreground: 0 0% 4%;
-    --sidebar-accent: 0 0% 12%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 0 0% 18%;
-    --sidebar-ring: 130 100% 50%;
+    /* Backgrounds */
+    --zs-bg-primary: 240 10% 3.9%;
+    --zs-bg-secondary: 240 10% 6%;
+    --zs-bg-tertiary: 240 10% 9%;
+    
+    /* Text */
+    --zs-text-primary: 0 0% 98%;
+    --zs-text-secondary: 240 5% 64.9%;
+    --zs-text-muted: 240 4% 46%;
+    
+    /* Accents - Neon Signature */
+    --zs-accent-primary: 142 70% 50%; /* Electric Green */
+    --zs-accent-secondary: 217 91% 60%; /* Cyber Blue */
+    --zs-accent-destructive: 0 84% 60%;
+    
+    /* Borders & Lines */
+    --zs-border-subtle: 240 3.7% 15.9%;
+    --zs-border-strong: 240 3.7% 25%;
+    
+    /* Shadcn Compatibility Bridges */
+    --background: var(--zs-bg-primary);
+    --foreground: var(--zs-text-primary);
+    --card: var(--zs-bg-secondary);
+    --card-foreground: var(--zs-text-primary);
+    --popover: var(--zs-bg-secondary);
+    --popover-foreground: var(--zs-text-primary);
+    --primary: var(--zs-accent-primary);
+    --primary-foreground: var(--zs-bg-primary);
+    --secondary: var(--zs-bg-tertiary);
+    --secondary-foreground: var(--zs-text-primary);
+    --muted: var(--zs-bg-tertiary);
+    --muted-foreground: var(--zs-text-secondary);
+    --accent: var(--zs-accent-primary);
+    --accent-foreground: var(--zs-bg-primary);
+    --destructive: var(--zs-accent-destructive);
+    --destructive-foreground: var(--zs-text-primary);
+    --border: var(--zs-border-subtle);
+    --input: var(--zs-border-subtle);
+    --ring: var(--zs-accent-primary);
+    --radius: 0.5rem;
   }
 
-  .dark {
-    /* Same as root - dark theme is the default */
-    --background: 0 0% 4%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 7%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 7%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 130 100% 50%;
-    --primary-foreground: 0 0% 4%;
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
-    --accent: 130 100% 50%;
-    --accent-foreground: 0 0% 4%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 130 100% 50%;
-    --sidebar-background: 0 0% 5%;
-    --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 130 100% 50%;
-    --sidebar-primary-foreground: 0 0% 4%;
-    --sidebar-accent: 0 0% 12%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 0 0% 18%;
-    --sidebar-ring: 130 100% 50%;
+  .light {
+    --zs-bg-primary: 0 0% 100%;
+    --zs-bg-secondary: 0 0% 98%;
+    --zs-bg-tertiary: 0 0% 94%;
+    
+    --zs-text-primary: 240 10% 3.9%;
+    --zs-text-secondary: 240 5% 25%;
+    --zs-text-muted: 240 4% 46%;
+    
+    --zs-border-subtle: 240 5% 90%;
+    --zs-border-strong: 240 5% 80%;
+    
+    --background: var(--zs-bg-primary);
+    --foreground: var(--zs-text-primary);
+    --card: var(--zs-bg-secondary);
+    --popover: var(--zs-bg-secondary);
+    --secondary: var(--zs-bg-tertiary);
+    --muted: var(--zs-bg-tertiary);
+    --border: var(--zs-border-subtle);
+    --input: var(--zs-border-subtle);
+
+    .text-gradient {
+      @apply bg-clip-text text-transparent bg-gradient-to-tr from-zinc-900 via-zinc-800 to-zinc-500;
+    }
+    
+    .zs-glass {
+      @apply bg-white/40 border-black/5;
+    }
+
+    .bg-grid-cyber {
+      background-image: radial-gradient(circle at 2px 2px, hsl(240 5% 80% / 0.4) 1px, transparent 0);
+    }
   }
 }
 
@@ -97,89 +94,61 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground font-sans antialiased selection:bg-primary/30 selection:text-primary;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 
-  /* Typography */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-semibold tracking-tight;
-  }
-
-  /* Custom scrollbar for dark theme */
-  ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-  }
-
-  ::-webkit-scrollbar-track {
-    @apply bg-background;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply bg-muted rounded-full;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-muted-foreground;
+    @apply font-heading font-bold tracking-tight text-balance;
   }
 }
 
 @layer utilities {
-  /* Blinking cursor animation */
-  @keyframes blink {
-    0%, 50% { opacity: 1; }
-    51%, 100% { opacity: 0; }
+  /* Premium Glassmorphism */
+  .zs-glass {
+    @apply bg-opacity-20 backdrop-blur-lg border border-white/10 bg-white/5;
   }
 
-  .animate-blink {
-    animation: blink 1s step-end infinite;
+  /* Cyber Glow Effects */
+  .glow-green {
+    box-shadow: 0 0 25px -5px hsl(var(--zs-accent-primary) / 0.4);
+  }
+  
+  .glow-blue {
+    box-shadow: 0 0 25px -5px hsl(var(--zs-accent-secondary) / 0.4);
   }
 
-  /* Subtle glow effect for accent elements */
-  .glow-primary {
-    box-shadow: 0 0 20px hsl(130 100% 50% / 0.3);
-  }
-
-  /* Code-style text */
-  .font-mono {
-    font-family: 'JetBrains Mono', monospace;
-  }
-
-  /* Technical grid pattern background */
-  .bg-grid {
+  /* Technical Patterns */
+  .bg-grid-cyber {
     background-image: 
-      linear-gradient(hsl(0 0% 18% / 0.5) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(0 0% 18% / 0.5) 1px, transparent 1px);
-    background-size: 50px 50px;
+      radial-gradient(circle at 2px 2px, hsl(var(--zs-border-strong) / 0.15) 1px, transparent 0);
+    background-size: 24px 24px;
   }
 
-  /* Hover lift effect for cards */
-  .hover-lift {
-    @apply transition-all duration-300 ease-out;
+  /* Masking & Gradients */
+  .mask-fade-bottom {
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
   }
 
-  .hover-lift:hover {
-    @apply -translate-y-1;
-    box-shadow: 0 10px 40px hsl(130 100% 50% / 0.1);
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-tr from-white via-white to-white/50;
   }
 
-  /* Animated underline for links */
-  .link-underline {
-    @apply relative;
+  /* Animation Utilities */
+  .perspective-1000 {
+    perspective: 1000px;
   }
+}
 
-  .link-underline::after {
-    content: '';
-    @apply absolute bottom-0 left-0 w-0 h-px bg-primary transition-all duration-300;
-  }
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
 
-  .link-underline:hover::after {
-    @apply w-full;
-  }
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
 
-  /* Staggered animation delays */
-  .stagger-1 { animation-delay: 0.1s; }
-  .stagger-2 { animation-delay: 0.2s; }
-  .stagger-3 { animation-delay: 0.3s; }
-  .stagger-4 { animation-delay: 0.4s; }
+::-webkit-scrollbar-thumb {
+  @apply bg-zs-border-strong rounded-full hover:bg-primary/50 transition-colors;
 }

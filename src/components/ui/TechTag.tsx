@@ -9,7 +9,7 @@ export function TechTag({ children, className }: TechTagProps) {
   return (
     <span
       className={cn(
-        "inline-flex items-center px-2 py-1 font-mono text-xs text-muted-foreground bg-secondary rounded-sm border border-border",
+        "inline-flex items-center px-3 py-1 font-mono text-[11px] uppercase tracking-wide text-zs-text-muted bg-zs-bg-primary border border-zs-border-subtle rounded-lg hover:border-zs-accent-primary/30 hover:text-zs-text-secondary transition-colors",
         className
       )}
     >
