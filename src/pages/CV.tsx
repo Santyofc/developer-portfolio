@@ -72,7 +72,7 @@ export default function CV() {
                 </div>
                 <div className="flex items-center gap-3">
                   <Globe className="h-4 w-4 text-emerald-600" />
-                  <a href="https://zonasurtech.online" target="_blank" className="hover:text-emerald-600 transition-colors">zonasurtech.online</a>
+                  <a href="https://dev.zonasurtech.online" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">dev.zonasurtech.online</a>
                 </div>
               </div>
             </header>

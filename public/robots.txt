@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://zonasurtech.online/sitemap.xml
+Sitemap: https://dev.zonasurtech.online/sitemap.xml

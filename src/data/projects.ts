@@ -6,7 +6,7 @@ export const projects: Project[] = [
     category: "Full Stack",
     tags: ["PHP", "MySQL", "Linux", "Apache"],
     image: "/placeholder.svg",
-    link: "https://zonasurtech.online",
+    link: "https://dev.zonasurtech.online",
     en: {
       title: "Zona Sur Tech Platform",
       description: "Premium infrastructure for modern software and digital security services.",

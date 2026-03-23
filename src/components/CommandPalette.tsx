@@ -142,7 +142,7 @@ export function CommandPalette() {
         <CommandSeparator className="bg-zs-border-subtle" />
 
         <CommandGroup heading="Quick Access">
-          <CommandItem onSelect={() => window.open("https://zonasurtech.online", "_blank")}>
+          <CommandItem onSelect={() => window.open("https://dev.zonasurtech.online", "_blank")}>
             <Terminal className="mr-2 h-4 w-4" />
             <span>Zona Sur Tech (Official Site)</span>
           </CommandItem>

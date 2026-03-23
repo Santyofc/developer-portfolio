@@ -4,7 +4,7 @@ import { Linkedin, Mail, Globe } from "lucide-react";
 const socialLinks = [
   { href: "https://www.linkedin.com/in/santi-delgados/", icon: Linkedin, label: "LinkedIn" },
   { href: "mailto:delgadoleiva60@gmail.com", icon: Mail, label: "Email" },
-  { href: "https://zonasurtech.online", icon: Globe, label: "Zona Sur Tech" },
+  { href: "https://dev.zonasurtech.online", icon: Globe, label: "Zona Sur Tech" },
 ];
 
 export function Footer() {
